@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FeatureB_Test {
+    // Unhappy Path
     @Test
     public void calculateIndividualCapacity_EmptyList_ReturnsEmptyMap() {
         TeamMember member = new TeamMember();
@@ -20,6 +21,7 @@ public class FeatureB_Test {
         Assert.assertEquals(null, member.calculateIndividualCapacity(members, sprintLength));
     }
 
+    // Happy Path for Individual Capacity
     @Test
     public void calculateIndividualCapacity_ValidInput_CalculatesCorrectly() {
         TeamMember member = new TeamMember();
@@ -44,6 +46,7 @@ public class FeatureB_Test {
         Assert.assertEquals(expectedMaxCapacity, maxCapacities[0], 0.00001);
     }
 
+    // Happy Path for Team Capacity
     @Test
     public void calculateTeamCapacity_ValidInput_CalculatesCorrectly() {
         TeamMember member = new TeamMember();
