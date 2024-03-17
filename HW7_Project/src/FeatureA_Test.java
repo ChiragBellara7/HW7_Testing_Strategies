@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FeatureA_Test {
+    // Unhappy Path
     @Test
     public void calculateAverageVelocity_EmptyList_ReturnsZero() {
         List<String> sprintPoints = Arrays.asList();
@@ -12,6 +13,7 @@ public class FeatureA_Test {
         Assert.assertEquals(0.0, result, 0.0001);
     }
 
+    // Unhappy Path
     @Test
     public void calculateAverageVelocity_NullList_ReturnsZero() {
         List<String> sprintPoints = null;
@@ -19,6 +21,7 @@ public class FeatureA_Test {
         Assert.assertEquals(0.0, result, 0.0001);
     }
 
+    // Happy Path
     @Test
     public void calculateAverageVelocity_ValidInput_CalculatesCorrectly() {
         List<String> sprintPoints = Arrays.asList("20", "32", "28");
